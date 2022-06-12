@@ -1,4 +1,4 @@
-package com.plopcas.pokemon.pokemon.controller;
+package com.plopcas.pokemon.pokemon.rest;
 
 import com.plopcas.pokemon.pokemon.dto.PokemonDTO;
 import com.plopcas.pokemon.pokemon.exception.PokemonSpeciesNotFoundException;
