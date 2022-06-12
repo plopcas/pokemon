@@ -4,6 +4,8 @@ This API has two main endpoints:
 1. Return basic Pokemon information.
 2. Return basic Pokemon information but with a ‘fun’ translation of the Pokemon description.
 
+![diagram](https://user-images.githubusercontent.com/3872574/173253358-bca47faa-2543-4c88-b6e6-d6111bd3ed8d.png)
+
 ## Considerations
 
 This is not a production ready application. In order to "productionise" this, you should consider the following:
