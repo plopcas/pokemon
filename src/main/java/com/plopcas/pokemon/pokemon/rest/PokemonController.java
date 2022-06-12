@@ -30,8 +30,8 @@ public class PokemonController {
     public PokemonDTO getBasicPokemonInfo(@PathVariable String name) {
         try {
             return pokemonMapper.toDto(pokemonService.findByName(name));
-        } catch (PokemonSpeciesNotFoundException httpException) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, httpException.getMessage());
+        } catch (PokemonSpeciesNotFoundException exception) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, exception.getMessage());
         } catch (Exception exception) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -42,8 +42,8 @@ public class PokemonController {
     public PokemonDTO getTranslatedPokemonInfo(@PathVariable String name) {
         try {
             return translationService.translate(pokemonMapper.toDto(pokemonService.findByName(name)));
-        } catch (PokemonSpeciesNotFoundException httpException) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, httpException.getMessage());
+        } catch (PokemonSpeciesNotFoundException exception) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, exception.getMessage());
         } catch (Exception exception) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
         }
